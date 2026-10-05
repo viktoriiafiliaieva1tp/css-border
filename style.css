@@ -1,0 +1,238 @@
+/* ============================================
+   PLIK STYLES.CSS – ZADANIA DO WYKONANIA
+   ============================================
+   Otwórz ten plik i uzupełnij style według
+   instrukcji w komentarzach poniżej.
+   ============================================ */
+
+
+/* ---------- PODSTAWOWE STYLE (nie zmieniaj) ---------- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.intro {
+    background: #e8f4fd;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.hint {
+    background: #fff3cd;
+    padding: 10px 14px;
+    border-left: 4px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #fff;
+    /* Domyślnie elementy nie mają bordera, marginesu ani paddingu – Ty je dodasz */
+}
+
+.demo-container {
+    background: #ddd;
+    padding: 10px;
+    /* Szare tło pomaga zobaczyć marginesy (odstępy na zewnątrz) */
+}
+
+.card {
+    background: #fff;
+}
+
+
+/* ============================================
+   ZADANIE 1: BORDER – różne style
+   ============================================
+   Border składa się z trzech części:
+   - border-width  (grubość, np. 2px, 5px)
+   - border-style  (styl linii)
+   - border-color  (kolor)
+
+   Możesz pisać skrótem:
+   border: 2px solid red;
+
+   Lub osobno:
+   border-width: 2px;
+   border-style: solid;
+   border-color: red;
+
+   Popularne style:
+   solid, dashed, dotted, double, groove, ridge, inset, outset, none
+   ============================================ */
+
+/* 1a. Nadaj .box1 border o grubości 3px, styl solid, kolor #e74c3c */
+.box1 {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #e74c3c;
+}
+
+/* 1b. Nadaj .box2 border o grubości 3px, styl dashed, kolor #3498db */
+.box2 {
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #3498db;
+}
+
+/* 1c. Nadaj .box3 border o grubości 4px, styl dotted, kolor #27ae60 */
+.box3 {
+    border-width: 4px;
+    border-style: dotted;
+    border-color: #27ae60;
+}
+
+/* 1d. Nadaj .box4 border o grubości 6px, styl double, kolor #9b59b6 */
+.box4 {
+    border-width: 6px;
+    border-style: double;
+    border-color: #9b59b6;
+}
+
+/* 1e. Nadaj .box5 RÓŻNE border'y na różnych bokach:
+       - górny: 4px solid #e67e22
+       - prawy: 4px dashed #1abc9c
+       - dolny: 4px dotted #e74c3c
+       - lewy:  8px double #3498db
+   Podpowiedź: użyj border-top, border-right, border-bottom, border-left */
+.box5 {
+    border-top: 4px solid #e67e22;
+    border-right: 4px dashed #1abc9c;
+    border-bottom: 4px dotted #e74c3c;
+    border-left: 8px double #3498db;
+}
+
+
+/* ============================================
+   ZADANIE 2: MARGIN vs PADDING
+   ============================================
+   WAŻNA RÓŻNICA:
+
+   MARGIN  = odstęp NA ZEWNĄTRZ elementu
+             (odsuwa element od innych elementów / od krawędzi kontenera)
+             Nie ma tła elementu – widać tło rodzica.
+
+   PADDING = odstęp WEWNĄTRZ elementu
+             (odsuwa treść od bordera / krawędzi elementu)
+             Ma tło elementu – zwiększa „wewnętrzną przestrzeń”.
+
+   Oba można ustawiać skrótem (kolejność: top right bottom left)
+   lub osobno (margin-top, padding-left itd.).
+
+   Przykład skrótu:
+   margin: 20px;           /* wszystkie boki 20px */
+   margin: 10px 20px;      /* góra/dół 10px, lewo/prawo 20px */
+   margin: 5px 10px 15px 20px; /* top right bottom left */
+   ============================================ */
+
+/* 2a. Nadaj .box-margin:
+       - margin: 30px (wszystkie boki)
+       - border: 2px solid #e74c3c
+       Zauważ, że szare tło kontenera widać wokół elementu – to jest margin. */
+.box-margin {
+    margin: 30px;
+    border: 2px solid #e74c3c;
+}
+
+/* 2b. Nadaj .box-padding:
+       - padding: 30px (wszystkie boki)
+       - border: 2px solid #3498db
+       Zauważ, że treść jest odsunięta od niebieskiego bordera, a element
+       nie jest odsunięty od sąsiadów tak mocno jak ten z marginem. */
+.box-padding {
+    padding: 30px;
+    border: 2px solid #3498db;
+}
+
+/* 2c. Nadaj .box-both:
+       - margin: 20px
+       - padding: 25px
+       - border: 3px solid #27ae60
+       Porównaj z poprzednimi – widać zarówno zewnętrzny odstęp (margin),
+       jak i wewnętrzny (padding). */
+.box-both {
+    margin: 20px;
+    padding: 25px;
+    border: 3px solid #27ae60;
+}
+
+
+/* ============================================
+   ZADANIE 3: Box model w praktyce
+   ============================================
+   Box model = content + padding + border + margin
+
+   3a. Nadaj .box-model:
+       - padding: 20px 40px   (góra/dół 20px, lewo/prawo 40px)
+       - margin: 15px auto    (góra/dół 15px, lewo/prawo auto → wyśrodkowanie)
+       - border: 5px solid #2c3e50
+       - tło: #ecf0f1
+       - maksymalną szerokość: 400px
+   ============================================ */
+
+.box-model {
+    padding: 20px 40px;
+    margin: 15px auto;
+    border: 5px solid #2c3e50;
+    background-color: #ecf0f1;
+    max-width: 400px;
+}
+
+
+/* ============================================
+   ZADANIE 4: Karty – połączenie wszystkiego
+   ============================================
+   4a. Nadaj .card:
+       - border: 1px solid #ccc
+       - border-radius: 8px          (zaokrąglone rogi)
+       - padding: 20px
+       - margin-bottom: 20px
+       - box-shadow: 0 2px 8px rgba(0,0,0,0.1)  (delikatny cień – opcjonalnie)
+
+   4b. Nadaj .card-alt:
+       - border: 3px dashed #9b59b6
+       - border-radius: 16px
+       - padding: 30px
+       - margin-bottom: 20px
+       - tło: #f9f0ff
+   ============================================ */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-alt {
+    border: 3px dashed #9b59b6;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #f9f0ff;
+}
+
+
+/* ============================================
+   PODSUMOWANIE (do przeczytania po wykonaniu zadań)
+   ============================================
+   - border  → ramka wokół elementu (width + style + color)
+   - margin  → odstęp na ZEWNĄTRZ (wpływa na pozycję względem innych elementów)
+   - padding → odstęp WEWNĄTRZ (wpływa na przestrzeń między treścią a borderem)
+
+   Kolejność w box modelu (od środka na zewnątrz):
+   content → padding → border → margin
+   ============================================ */
